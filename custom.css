@@ -1,0 +1,819 @@
+/*-------------------------------------------------
+                    RESET
+--------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --highlighterOrange: #ff6250;
+  --grayComplexion: #fcfcfc;
+  --grayHex: #e0e0e0;
+  --dualOffset: 97.4%;
+  --dualTranslate: -2.6%;
+  --navColor: black; /* #fc4971;*/
+}
+
+body {
+  width: 100%;
+  background-color: var(--grayComplexion);
+}
+
+/*-------------------------------------------------
+                    NAVIGATION
+--------------------------------------------------*/
+
+.topnav {
+  overflow: hidden;
+  background: black;
+  z-index: 1;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: block;
+}
+
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: var(--highlighterOrange);
+  color: black;
+}
+
+/*-------------------------------------------------
+                    MAIN SECTIONS
+--------------------------------------------------*/
+
+.background {
+  /* create a green background with an image overlay */
+  background-color: var(--highlighterOrange);
+  background-image: url("inspiration-geometry.png");
+  background-size: auto;
+  background-attachment: fixed;
+}
+
+.cover-arrow i {
+  display: none;
+}
+
+.cover-section {
+  /* set the padding and text type for cover */
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  padding: 6.44em 1.38em;
+}
+
+.cover-section h1 {
+  /* cover text decorations */
+  font-weight: 700;
+  font-size: 3.75em;
+  /* Keep letters closer together */
+  letter-spacing: -0.045em;
+  overflow-wrap: break-word;
+}
+
+.cover-section p {
+  /* cover sub-text */
+  padding-top: 1.5em;
+  padding-bottom: 1.4em;
+  font-weight: 600;
+  font-size: 0.85em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+#creatorRef {
+  /* link to authors profile */
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px dotted;
+}
+
+#creatorRef:hover {
+  border-bottom: none;
+}
+
+.cover-picture {
+  /* cover picture to 100% of height */
+  height: calc(100vh);
+  background-image: url("img/Optimized-Eleanor-Unsplash.jpg");
+  /* iOS doesn't support cover & fixed; results in blurry image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.arrow-flex i {
+  display: none;
+}
+
+.header-section {
+  /* set the padding and text type for titles */
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 800;
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.header-section h2 {
+  /* all the titles on the page */
+  font-size: 1.13em;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.content-section {
+  /* all text on the page */
+  font-family: "Nunito", Arial, sans-serif;
+  letter-spacing: 0.03em;
+  font-weight: 300;
+  padding: 3em 2em;
+  line-height: 2em;
+  font-size: 0.9em;
+}
+
+.content-section p {
+  /* paragraph spacing */
+  margin-bottom: 1.85em;
+}
+
+.content-section > *:last-child {
+  /* give the last child element a margin of 0 */
+  margin-bottom: 0;
+}
+
+.content-section span {
+  /* first three words in paragraph */
+  font-weight: 600;
+}
+
+.main-image {
+  /* responsive image for a section */
+  width: 100%;
+  height: auto;
+}
+
+.icon-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.icon-list {
+  /* align icons and text */
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+}
+
+.data-spacing {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 300;
+  margin: 1.5em 1em;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+.icon-list i.fas,
+.icon-list i.fab {
+  /* align icons and figures */
+  position: absolute;
+  font-size: 1.8em;
+  left: calc((100% * 0.57735) / 3);
+  top: calc((100% * 0.57735) / 3);
+}
+
+.icon-list i.fa-biohazard {
+  /* diamond icon */
+  left: calc((100% * 0.57735) / 4);
+}
+
+.gallery-section {
+  margin: 2.06em 0;
+}
+
+.gallery-section h3 {
+  font-weight: 600;
+  margin-bottom: 1.38em;
+  font-size: 1em;
+}
+
+#img01 {
+  grid-area: img01;
+  object-position: center;
+}
+
+#img02 {
+  grid-area: img02;
+  object-position: top;
+}
+
+#img03 {
+  grid-area: img03;
+}
+
+#img04 {
+  grid-area: img04;
+  object-position: bottom;
+}
+
+#img05 {
+  grid-area: img05;
+}
+
+#img06 {
+  grid-area: img06;
+}
+
+#img07 {
+  grid-area: img07;
+}
+
+#img08 {
+  grid-area: img08;
+}
+
+#img09 {
+  grid-area: img09;
+}
+
+#img10 {
+  grid-area: img10;
+}
+
+.gallery-1 img {
+  /* fit first set of images */
+  width: 100%;
+  min-height: 12em;
+  max-height: 12em;
+  /* keep the image from stretching at different widths */
+  object-fit: cover;
+}
+
+.gallery-1 {
+  /* first set of images */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5em;
+  grid-template-areas:
+    "img01 img01"
+    "img02 img03"
+    "img04 img04";
+}
+
+.gallery-2 img {
+  /* fit second set of images */
+  width: 100%;
+  min-height: 12em;
+  max-height: 12em;
+  /* keep the image from stretching at different widths */
+  object-fit: cover;
+}
+
+.gallery-2 {
+  /* second set of images */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5em;
+  grid-template-areas:
+    "img05 img05"
+    "img06 img07";
+}
+
+.gallery-3 img {
+  /* fit third set of images */
+  width: 100%;
+  min-height: 12em;
+  max-height: 12em;
+  /* keep the image from stretching at different widths */
+  object-fit: cover;
+}
+
+.gallery-3 {
+  /* third set of images */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5em;
+  grid-template-areas:
+    "img08 img09"
+    "img10 img10";
+}
+
+#get-started {
+  /* create button continued */
+  background-color: var(--highlighterOrange);
+  transition: all 0.25s ease-in-out;
+}
+
+#get-started:hover {
+  background-color: #94fde6;
+}
+
+#learn-more {
+  /* create button look */
+  margin-top: 1em;
+  border: 2px solid var(--grayHex);
+  transition: all 0.25s ease-in-out;
+  font-weight: 600;
+}
+
+#learn-more a {
+  transition: all 0.25s ease-in-out;
+}
+
+#learn-more:hover {
+  border-color: var(--highlighterOrange);
+}
+
+#learn-more:hover a {
+  color: var(--highlighterOrange);
+}
+
+input {
+  /* set up inputs */
+  width: 100%;
+  border-radius: 0.3em;
+  border: 2px solid var(--grayHex);
+  padding: 0.4em 0.8em;
+  margin-bottom: 1.38em;
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 1.02em;
+  line-height: 1.7em;
+}
+
+input::placeholder {
+  color: var(--grayHex);
+  opacity: 1;
+}
+
+textarea {
+  /* set up textarea */
+  width: 100%;
+  border-radius: 0.3em;
+  border: 2px solid var(--grayHex);
+  padding-top: 0.8em;
+  padding-left: 0.8em;
+  padding-bottom: 10em;
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 1.02em;
+  margin-bottom: 1.38em;
+}
+
+textarea::placeholder {
+  color: var(--grayHex);
+  opacity: 1;
+}
+
+button {
+  /* set up button */
+  width: 100%;
+  border-radius: 0.3em;
+  text-transform: uppercase;
+  background-color: var(--highlighterOrange);
+  line-height: 3.85em;
+  letter-spacing: 0.13em;
+  border-radius: 0.3em;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 600;
+  font-family: "Nunito", Arial, sans-serif;
+  border-style: none;
+}
+
+button:hover {
+  background-color: #94fde6;
+  cursor: pointer;
+}
+
+footer {
+  /* set up footer section */
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: 300;
+  padding: 3em 2em;
+  line-height: 1.7em;
+  padding-top: 0;
+}
+
+footer h3 {
+  /* alter footer headings */
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-bottom: 0.7em;
+  text-transform: uppercase;
+}
+
+footer li {
+  /* remove bullets */
+  list-style-type: none;
+  /* create spacing between footer items */
+  margin-bottom: 1.87em;
+}
+
+footer li > *:nth-child(2) {
+  /* creat spacing between the second item under the list elements */
+  font-size: 0.9em;
+}
+
+footer a {
+  /* remove underline */
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px dotted;
+}
+
+footer a:hover {
+  /* remove border */
+  border-bottom: none;
+}
+
+footer .fab {
+  font-size: 1.15em;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+footer .fab:hover {
+  color: var(--highlighterOrange);
+}
+
+.copyright {
+  padding: 3em 2em;
+}
+
+/*-------------------------------------------------
+                    FIGURE
+--------------------------------------------------*/
+
+.fig-size {
+  width: 2.8em;
+  height: 2.8em;
+}
+
+.figure-color {
+  background-color: var(--grayHex);
+}
+
+.figure-wrapper {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.figure {
+  height: 100%;
+  width: calc(100% * 0.57735);
+  display: inline-block;
+}
+
+.figure:before {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: "";
+  transform: rotateZ(60deg);
+}
+
+.figure:after {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: "";
+  transform: rotateZ(-60deg);
+}
+
+/*-------------------------------------------------
+                    MEDIA QUERIES
+--------------------------------------------------*/
+
+@media (min-width: 375px) {
+  .cover-section h1 {
+    /* cover text decorations */
+    font-weight: 700;
+    font-size: 4.5em;
+  }
+
+  .cover-section {
+    padding: 3.35em 1.83em;
+  }
+
+  .header-section {
+    padding: 2.75em 1.83em;
+  }
+
+  .header-section h2 {
+    /* all the titles on the page */
+    font-size: 2em;
+    line-height: 1.7;
+    letter-spacing: 0.15em;
+  }
+
+  footer {
+    padding: 2.75em 1.83em;
+  }
+
+  .copyright {
+    padding: 2.75em 1.83em;
+  }
+}
+
+@media (min-width: 480px) {
+  .topnav a {
+    padding: 14px 16px;
+    font-size: 1.5rem;
+  }
+
+  .cover-section h1 {
+    width: 50%;
+    font-size: 5em;
+  }
+
+  .header-section h2 {
+    /* all the titles on the page */
+    /* keep words to a fixed container */
+    width: 19em;
+  }
+
+  .content-section {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 736px) {
+  .cover-section h1 {
+    font-size: 5em;
+    letter-spacing: -0.05em;
+  }
+
+  .cover-section {
+    width: 100%;
+    height: 100vh;
+    font-size: 1.2em;
+    padding: 20vh 0 20vh 4em;
+  }
+
+  .header-section {
+    padding: 4.3em 4.15em;
+    font-size: 1.16em;
+  }
+
+  .content-section {
+    padding: 4.3em 4.15em;
+    font-size: 1.11em;
+    letter-spacing: 0.05em;
+    line-height: 2.1;
+  }
+
+  footer {
+    padding: 4.3em 4.15em;
+  }
+
+  .copyright {
+    padding: 4.3em 4.15em;
+  }
+}
+
+@media (min-width: 1235px) {
+  /* this will serve as the split screen */
+
+  .grid-section {
+    /* set headers and content side by side */
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-areas: "header div";
+  }
+
+  .grid-section header {
+    grid-area: header;
+    /* same as #contact and footer max-width */
+    /* creating a grid side by side goes over screen width
+        so we have to shorten the width */
+    max-width: var(--dualOffset);
+  }
+
+  .grid-section div {
+    grid-area: div;
+    /* same as #content transform */
+    /* move right side to the left to cover gap */
+    transform: translate(var(--dualTranslate), 0);
+  }
+
+  .grid-section-2 {
+    /* set 3 sections */
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-areas:
+      "header2 content2"
+      "footer2 content2";
+  }
+
+  #contact {
+    grid-area: header2;
+    /* same as .grid-section header and footer max-width */
+    /* creating a grid side by side goes over screen width
+        so we have to shorten the width */
+    max-width: var(--dualOffset);
+  }
+
+  #content {
+    grid-area: content2;
+    /* same as .grid-section div transform */
+    /* move right side to the left to cover gap */
+    transform: translate(var(--dualTranslate), 0);
+  }
+
+  footer {
+    grid-area: footer2;
+    /* same as #contact and .grid section header max-width */
+    /* creating a grid side by side goes over screen width
+        so we have to shorten the width */
+    max-width: var(--dualOffset);
+    text-align: right;
+    /* create a green background with an image overlay */
+    background-color: var(--highlighterOrange);
+    background-image: url("inspiration-geometry.png");
+    background-size: auto;
+    background-attachment: fixed;
+    margin-top: -2em;
+    padding-right: 18.5%;
+  }
+
+  .cover-section {
+    /* format cover text */
+    text-align: right;
+    padding-top: 10vh;
+    padding-right: 8.5%;
+  }
+
+  .cover-section h1 {
+    /* sets h1 to the right hand side by giving more space */
+    width: 100%;
+  }
+
+  .header-section {
+    /* different sub-titles */
+    padding-top: 2.06em;
+    padding-right: 9%;
+    text-align: right;
+  }
+
+  .content-section {
+    font-size: 1.1em;
+    /* same as .header-section padding-top */
+    padding: 2.06em 2em 3em 4em;
+  }
+
+  .arrow-flex {
+    /* align title and arrow symbol */
+    display: flex;
+    flex-direction: row;
+  }
+
+  .arrow-flex i {
+    /* have the arrow symbol appear */
+    display: block;
+  }
+
+  .arrow-flex i.fas {
+    font-size: 2em;
+    margin-left: 1em;
+  }
+
+  .copyright {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-areas: "space copyright";
+    padding: 0;
+  }
+
+  .copyright span {
+    grid-area: space;
+    /* create a green background with an image overlay */
+    background-color: var(--highlighterOrange);
+    background-image: url("inspiration-geometry.png");
+    background-size: auto;
+    background-attachment: fixed;
+    max-width: var(--dualOffset);
+  }
+
+  .copyright p {
+    grid-area: copyright;
+    transform: translate(var(--dualTranslate), 0);
+    padding: 1em 2em 3em 4em;
+    text-align: center;
+    color: gray;
+  }
+
+  #content form {
+    /* set form to 75% of the section */
+    width: 75%;
+    vertical-align: center;
+    margin: 0 auto;
+  }
+
+  #content button {
+    /* set button in center of page and half the
+        size of the form */
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .figure {
+    /* use circles instead of hexagons */
+    height: 3em;
+    width: 3em;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .figure:before {
+    width: 0;
+    height: 0;
+  }
+
+  .figure:after {
+    width: 0;
+    height: 0;
+  }
+
+  .distance {
+    /* add space between pictures and text 8 */
+    margin-top: 3.5em;
+  }
+
+  .icon-list {
+    /* align icons and text */
+    width: 50%;
+  }
+}
+
+@media (min-height: 495px) and (min-width: 1235px) {
+  /* for less window height */
+  /* for cover arrow */
+  #arrow-link {
+    text-decoration: none;
+  }
+
+  .cover-arrow i {
+    /* show arrow */
+    display: inline-block;
+    color: black;
+    position: relative;
+  }
+
+  .cover-arrow i.fas {
+    margin-top: 0.7em;
+    font-size: 4em;
+  }
+
+  #double-arrow {
+    animation-name: vibe;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    width: 10%;
+  }
+
+  @keyframes vibe {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.12);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}
