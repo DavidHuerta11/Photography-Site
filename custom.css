@@ -10,7 +10,7 @@
 :root {
   --highlighterOrange: #ff6250;
   --grayComplexion: #fcfcfc;
-  --grayHex: #e0e0e0;
+  --grayHex: rgb(196, 190, 190);
   --dualOffset: 97.4%;
   --dualTranslate: -2.6%;
   --navColor: black; /* #fc4971;*/
@@ -169,10 +169,52 @@ body {
   font-weight: 600;
 }
 
-.main-image {
-  /* responsive image for a section */
-  width: 100%;
-  height: auto;
+.slideshow-container {
+  max-width: 100%;
+  max-height: 427px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-red 0.6s ease;
+}
+
+.dot-active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .icon-display {
@@ -558,9 +600,7 @@ footer .fab:hover {
   }
 
   .header-section h2 {
-    /* all the titles on the page */
-    /* keep words to a fixed container */
-    width: 19em;
+    text-align: center;
   }
 
   .content-section {
@@ -591,6 +631,10 @@ footer .fab:hover {
     font-size: 1.11em;
     letter-spacing: 0.05em;
     line-height: 2.1;
+  }
+
+  .slideshow-container {
+    padding-left: 2rem;
   }
 
   footer {
@@ -698,6 +742,10 @@ footer .fab:hover {
     flex-direction: row;
   }
 
+  .header-section h2 {
+    width: 90%;
+    text-align: right;
+  }
   .arrow-flex i {
     /* have the arrow symbol appear */
     display: block;
@@ -705,7 +753,8 @@ footer .fab:hover {
 
   .arrow-flex i.fas {
     font-size: 2em;
-    margin-left: 1em;
+    margin-top: 0.35em;
+    width: 10%;
   }
 
   .copyright {
