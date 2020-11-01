@@ -17,7 +17,7 @@ JavaScript, HTML5, CSS3, PHP
 
 ## Problems faced
  
-The main problem faced was creating the design so that the layout would change after hitting a width of 1235px.
+The main problem faced was creating the design so that the layout would change and still look neat after hitting a width of 1235px.
 
 
 
